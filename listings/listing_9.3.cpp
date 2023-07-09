@@ -17,7 +17,7 @@ T parallel_accumulate(Iterator first,Iterator last,T init)
     thread_pool pool;
 
     Iterator block_start=first;
-    for(unsigned long i=0;i<(num_threads-1);++i)
+    for(unsigned long i=0;i<(num_blocks-1);++i)
     {
         Iterator block_end=block_start;
         std::advance(block_end,block_size);
